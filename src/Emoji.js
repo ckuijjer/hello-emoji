@@ -38,7 +38,7 @@ class Palette extends React.Component {
   }
 }
 
-const PaletteEmoji = ({ children }) => (
+const PaletteEmoji = ({ children, style }) => (
   <Palette emoji={children}>
     {palette => {
       const backgroundColor =
@@ -50,6 +50,7 @@ const PaletteEmoji = ({ children }) => (
           style={{
             transition: 'background-color 100ms ease-in-out',
             backgroundColor,
+            ...style,
           }}
         >
           {children}
@@ -60,7 +61,7 @@ const PaletteEmoji = ({ children }) => (
 )
 
 const Emoji = styled('div')({
-  flex: 1,
+  //   flex: 1,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
