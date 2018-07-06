@@ -19,11 +19,7 @@ class App extends Component {
   render() {
     const emoji = emojis[this.state.index]
 
-    return (
-      <div className="App">
-        <Emoji>{emoji}</Emoji>
-      </div>
-    )
+    return <Emoji>{emoji}</Emoji>
   }
 }
 

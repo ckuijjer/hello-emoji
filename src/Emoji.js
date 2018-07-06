@@ -44,19 +44,26 @@ const PaletteEmoji = ({ children }) => (
       const backgroundColor =
         palette && palette.Vibrant && palette.Vibrant.getHex()
 
-      return <Emoji backgroundColor={backgroundColor}>{children}</Emoji>
+      return (
+        <Emoji
+          style={{
+            transition: 'background-color 100ms ease-in-out',
+            backgroundColor,
+          }}
+        >
+          {children}
+        </Emoji>
+      )
     }}
   </Palette>
 )
 
-const Emoji = styled('div')(({ backgroundColor = 'transparent' }) => ({
+const Emoji = styled('div')({
   display: 'flex',
   height: '100vh',
   alignItems: 'center',
   justifyContent: 'center',
   fontSize: 120,
-  backgroundColor,
-  transition: 'background-color 100ms ease-in-out',
-}))
+})
 
 export default PaletteEmoji
