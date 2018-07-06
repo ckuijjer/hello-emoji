@@ -42,7 +42,8 @@ const PaletteEmoji = ({ children }) => (
   <Palette emoji={children}>
     {palette => {
       const backgroundColor =
-        palette && palette.Vibrant && palette.Vibrant.getHex()
+        (palette && palette.Vibrant && palette.Vibrant.getHex()) ||
+        (palette && palette.Muted && palette.Muted.getHex())
 
       return (
         <Emoji
@@ -60,9 +61,9 @@ const PaletteEmoji = ({ children }) => (
 
 const Emoji = styled('div')({
   display: 'flex',
-  height: '100vh',
   alignItems: 'center',
   justifyContent: 'center',
+
   fontSize: 120,
 })
 
