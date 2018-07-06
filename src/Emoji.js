@@ -60,10 +60,10 @@ const PaletteEmoji = ({ children }) => (
 )
 
 const Emoji = styled('div')({
+  flex: 1,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-
   fontSize: 120,
 })
 
