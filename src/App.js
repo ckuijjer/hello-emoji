@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import Emoji from './Emoji'
 import emojis from './emojis.json'
+import EqualWidthAndHeight from './EqualWidthAndHeight'
+import styled from '../node_modules/react-emotion'
 
 /*
 - responsiveness
@@ -17,6 +19,11 @@ import emojis from './emojis.json'
   - 1920: 8 => minWidth: 240
 */
 
+const Container = styled('div')({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+})
+
 class App extends Component {
   render() {
     const emojiStyle = {
@@ -25,18 +32,15 @@ class App extends Component {
     }
 
     return (
-      <div
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-        }}
-      >
+      <Container>
         {emojis.map(emoji => (
-          <Emoji key={emoji} style={emojiStyle}>
-            {emoji}
-          </Emoji>
+          <EqualWidthAndHeight>
+            <Emoji key={emoji} style={emojiStyle}>
+              {emoji}
+            </Emoji>
+          </EqualWidthAndHeight>
         ))}
-      </div>
+      </Container>
     )
   }
 }
