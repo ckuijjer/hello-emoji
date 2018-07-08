@@ -21,7 +21,14 @@ import styled from '../node_modules/react-emotion'
 
 const Container = styled('div')({
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
+
+  '@media (min-width: 768px)': {
+    gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))',
+  },
+  '@media (min-width: 1366px)': {
+    gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
+  },
 })
 
 class App extends Component {
