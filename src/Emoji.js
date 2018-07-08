@@ -65,7 +65,7 @@ const Emoji = styled('div')({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  fontSize: 120,
+  fontSize: 96,
 })
 
 export default PaletteEmoji
