@@ -21,23 +21,16 @@ import styled from '../node_modules/react-emotion'
 
 const Container = styled('div')({
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
 })
 
 class App extends Component {
   render() {
-    const emojiStyle = {
-      width: 235,
-      height: 235,
-    }
-
     return (
       <Container>
         {emojis.map(emoji => (
           <EqualWidthAndHeight>
-            <Emoji key={emoji} style={emojiStyle}>
-              {emoji}
-            </Emoji>
+            <Emoji key={emoji}>{emoji}</Emoji>
           </EqualWidthAndHeight>
         ))}
       </Container>
