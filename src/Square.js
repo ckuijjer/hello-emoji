@@ -16,10 +16,10 @@ const Inner = styled('div')({
   display: 'flex',
 })
 
-const EqualWidthAndHeight = ({ children }) => (
+const Square = ({ children }) => (
   <Outer>
     <Inner>{children}</Inner>
   </Outer>
 )
 
-export default EqualWidthAndHeight
+export default Square

@@ -19,6 +19,14 @@ export default class EmojiLoop extends React.Component {
   render() {
     const emoji = emojis[this.state.index]
 
-    return <Emoji>{emoji}</Emoji>
+    return (
+      <Emoji
+        style={{
+          transition: 'background-color 100ms ease-in-out',
+        }}
+      >
+        {emoji}
+      </Emoji>
+    )
   }
 }

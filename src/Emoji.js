@@ -48,7 +48,6 @@ const PaletteEmoji = ({ children, style }) => (
       return (
         <Emoji
           style={{
-            transition: 'background-color 100ms ease-in-out',
             backgroundColor,
             ...style,
           }}

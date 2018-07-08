@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import Emoji from './Emoji'
 import emojis from './emojis.json'
-import EqualWidthAndHeight from './EqualWidthAndHeight'
+import Square from './Square'
 import styled from '../node_modules/react-emotion'
 
 /*
@@ -36,9 +36,9 @@ class App extends Component {
     return (
       <Container>
         {emojis.map(emoji => (
-          <EqualWidthAndHeight>
-            <Emoji key={emoji}>{emoji}</Emoji>
-          </EqualWidthAndHeight>
+          <Square key={emoji}>
+            <Emoji>{emoji}</Emoji>
+          </Square>
         ))}
       </Container>
     )
